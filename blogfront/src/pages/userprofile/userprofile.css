@@ -1,0 +1,40 @@
+.userprofilecomponent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   align-content: center;
+  
+  }
+  .profileimg{
+   
+    height: 10rem;
+    width: 10rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 3px solid rgb(92, 88, 88);
+    border-radius: 5px;
+        
+  }
+  .carbuttonsremove{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    color: red;
+    border: 1px solid orangered;
+  }
+  .carbuttons{
+    margin-right: 1rem;
+    background-color: white;
+    color: #03588c;
+    border: 1px solid  #03588c;
+  }
+  .profileimage {
+    
+    display: flex;
+    margin: rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+  text-align: center;
+  }
+   

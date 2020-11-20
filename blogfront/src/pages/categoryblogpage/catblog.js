@@ -1,19 +1,20 @@
 import React,{useEffect,useState} from "react";
-import './myblogspage.css'
-import {Link} from 'react-router-dom'
+import './catblog.css'
+ 
 import Blogcomponent from "../../Components/blogcomponent/blogcomponent";
-const Myblogpage = () => {
+const Catblogpage = (props) => {
+    console.log(props)
   const [myposts, setMyposts] = useState({
    postarray:[]
   })
   let a = 2;
   useEffect(() => {
-    fetch(`http://localhost:5000/posts/`)
+    fetch(`http://localhost:5000/posts/category${props.location.pathname}`)
       .then((response) => response.json())
       .then((posts) => {
         setMyposts({
           ...myposts,
-        postarray:posts})
+        postarray:posts.categoryposts})
       })
      
       
@@ -22,12 +23,7 @@ const Myblogpage = () => {
   console.log(myposts.postarray)
   return (
     <div className="blogspagecontainer">
-          <div className="blogaddnewblog">
-              <Link path to= '/addnewblog'>
-              <button className="addnewblogbtn">Add New Blog</button>
-              </Link>
-       
-      </div>
+          
 
       {myposts.postarray.map((onepost) =>
         <div>
@@ -35,14 +31,14 @@ const Myblogpage = () => {
           imgsrc={
            onepost.imageUrl
           }
+                  category={onepost.category}
             likescount={onepost.likeCount}
             dislikescount={onepost.dislikeCount}
             favoritecount={onepost.favoriteCount}
             comments={onepost.comments}
             createdAt ={onepost.createdAt}
           title={onepost.title}
-            description={onepost.description}
-            category={onepost.category}
+          description={onepost.description}
         />
       </div>
       )
@@ -51,4 +47,4 @@ const Myblogpage = () => {
     </div>
   );
 };
-export default Myblogpage;
+export default Catblogpage;

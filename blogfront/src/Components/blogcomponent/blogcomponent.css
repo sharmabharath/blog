@@ -1,6 +1,6 @@
 .blogimagecontainer{
     height: 30rem;
-    width: 100%;
+    width: auto;
     margin: 1rem;
  
 }
@@ -11,17 +11,24 @@
     margin: 1rem;
 }
 .commentbox{
-    margin-left: 0rem;
+    margin-left: 2rem;
+    width: 96%;
+    border: 1px solid gray;
 }
 .likescontainer{
     display: flex;
     flex-direction: row;
     margin: 1rem;
+     
 }
 .commentscontainer{
     margin:1rem
 }
+.bodyblog{
+    margin-top: 1rem;
+}
 .blogcontainer{
+   
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     flex-direction: column;
@@ -30,19 +37,20 @@
     background-color:#E9E9EB;
 }
 .oldcomments{
-    text-align: center;
-    background-color: rgb(113, 119, 124);
-    color:white;
+    text-align: left;
+    background-color: rgb(202, 209, 214);
+    color:rgb(22, 20, 20);
     height: auto;
     border: 1px solid gray;
     border-radius: 3px;
     margin: 2rem;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 5%;
+   
 }
 .likebutton{
     background-color: rgb(35, 93, 199);
     color: white;
-    margin-top: 20rem;
+    margin-top: 2rem;
     margin-left: 2rem;
     border: 1px solid white;
     border-radius:3px;
@@ -55,7 +63,7 @@
 .dislikebutton{
     background-color: rgb(226, 32, 32);
     color: white;
-    margin-top: 20rem;
+    margin-top: 2rem;
     margin-left: 2rem;
     border: 1px solid white;
     border-radius:3px;
@@ -68,11 +76,24 @@
 .favbutton{
     background-color: rgb(14, 231, 68);
     color: white;
-    margin-top: 20rem;
+    margin-top: 2rem;
     margin-left: 2rem;
     border: 1px solid white;
     border-radius:3px;
     padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.categorybutton{
+    background-color: rgb(199, 35, 136);
+    color: white;
+    margin-top: 0rem;
+    margin-left: 1rem;
+    border: 1px solid white;
+    border-radius:30px;
+    padding: 7px 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

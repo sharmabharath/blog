@@ -26,11 +26,20 @@ const Blogcomponent = (props) => {
       favoritecount:  blogstate.favoritecount+1,
     });
   };
-
+console.log(props)
   return (
+    <div className="bodyblog">
+
+   
     <div className="blogcontainer">
       <div className="blogimagecontainer">
         <img style={{ height: "100%", width: "100%" }} src={props.imgsrc}></img>
+        </div>
+        <div>
+          <button className="categorybutton">{props.category}</button>
+        </div>
+      <div style={{margin:'1rem'}}>
+        <strong> Created at { props.createdAt}</strong>
       </div>
       <div className="headerblog">
         <h1>{props.title}</h1>
@@ -59,7 +68,7 @@ const Blogcomponent = (props) => {
                       CommentsArray.map((onecomment) =>
                         <div className="oldcomments">
                           {props.comments.map((onecomment) =>
-                              <h3>{onecomment}</h3>
+                              <h4>{onecomment}</h4>
                           )
                              
                           }
@@ -77,6 +86,7 @@ const Blogcomponent = (props) => {
           value={blogstate.comments}
           placeholder="Add New Comment"
         ></input>
+      </div>
       </div>
     </div>
   );

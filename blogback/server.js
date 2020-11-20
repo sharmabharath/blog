@@ -15,7 +15,7 @@ app.listen(PORT, () => { console.log(`server started on port:${PORT}`) });
 
 //setup Routes
 app.use("/posts",require("./routes/postRoutes"))
-
+app.use('/users',require("./routes/customers-routes"));
 
 //setup mongoose
 mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true}, (err) => {

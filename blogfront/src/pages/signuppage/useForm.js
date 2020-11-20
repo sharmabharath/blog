@@ -17,11 +17,33 @@ const [isSubmitting, SetisSubmitting] = useState(false);
     
   };
    
-  const handleSubmit  = (e)=>{
+  async  function handleSubmit(e){
     e.preventDefault();
         
       setError(Validate(Item));
     SetisSubmitting(true);
+    try{
+      const response = await fetch('http://localhost:5000/users/signup',{
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            firstname: Item.firstname,
+            lastname:Item.lastname,
+              mobileNo: Item.phone,
+              email: Item.email,
+              password: Item.password
+          })
+      });
+
+      const responseData = await response.json();
+      console.log(responseData);
+      
+      //dispatch item and push to add car page
+  } catch (err) {
+      console.log(err);
+  }
     };
     
     useEffect(() => {

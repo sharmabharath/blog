@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './categorycomponent.css'
 const Categorycomponent = (props) => {
     return (
@@ -9,10 +10,12 @@ const Categorycomponent = (props) => {
            
             </div>
             <div className="contentbox">
-               
+                <Link path to = {props.catname}>
                 <button className="categoryreadmorebutton">
                 {props.catname}
                 </button>
+                </Link>
+                
             </div>
            
         </div>
