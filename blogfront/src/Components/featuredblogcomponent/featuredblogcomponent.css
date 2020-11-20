@@ -1,0 +1,37 @@
+.featuredblogcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 90%;
+    height: 35rem;
+    background-color:grey;
+    margin: auto;
+    margin-top: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.featuredcontentbox{
+    width: 50%;
+    background-color: rgb(233, 233, 235);
+    height: 100%;
+}
+.featuredimagebox{
+    width: 50%;
+    background-color:red;
+    height: 100%;
+}
+.featuredreadmorebutton{
+    background-color: black;
+    color: white;
+    margin-top: 20rem;
+    margin-left: 2rem;
+    border: 1px solid white;
+    border-radius:3px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.imagebox{
+
+}

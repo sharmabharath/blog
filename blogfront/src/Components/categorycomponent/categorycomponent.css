@@ -1,0 +1,22 @@
+.categorycontainer{
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem;
+    border:2px solid gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.categoryimagebox{
+    height: 80%;
+}
+.categoryreadmorebutton{
+    height: 100%;
+    padding:21px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+}
